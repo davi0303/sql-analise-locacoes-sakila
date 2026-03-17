@@ -10,7 +10,6 @@ Analisar o comportamento de locação dos clientes utilizando SQL.
 # Análises realizadas
 - Total de locações por cliente
 - Categorias mais alugadas
-- Receita por cliente
 
 # Exemplo de Query - Categoria mais alugada por cliente.
 
