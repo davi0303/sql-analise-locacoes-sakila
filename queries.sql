@@ -45,3 +45,22 @@ JOIN address a ON c.address_id = a.address_id
 JOIN city ci ON a.city_id = ci.city_id
 GROUP BY ci.city
 ORDER BY total_clientes DESC;
+
+-- 5. Receita por funcionário
+
+use sakila;
+
+select st.staff_id,
+st.first_name as Nome,
+st.last_name as Sobrenome,
+sum(amount) as total_adquirido
+
+from staff st
+join payment p on st.staff_id = p.staff_id
+
+group by
+st.staff_id,
+st.first_name,
+st.last_name
+
+order by total_adquirido desc;
